@@ -1,0 +1,340 @@
+body{
+    margin:0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    background-color: var(--whitish);
+}
+:root{
+    --blackish:rgb(0, 0, 0);
+    --bluish:#2aaac1;/*blue*/;
+    --whitish:white;
+    --greenish:rgb(179, 190, 142);
+    --goldish:rgb(215, 170, 5);
+    --a_size:30px; 
+    --p_size:30px;
+    --p_family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.container{
+    display: grid;
+    height:100vh;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 0.3fr 1.7fr 1fr 1fr 1fr  1fr 1fr ;
+    grid-template-areas: 
+    "nav nav "
+    "Aboutme Aboutme "
+    "Papers Papers "
+    "gallery gallery"
+    "Hobbies Achievements"
+    "Books Books"
+    "Blogs Blogs";
+    font-family:sans-serif;
+    font-size:var(--p_size);
+    color:var(--whitish);
+    
+}
+section{
+    display: flex;
+}
+a{
+    text-decoration: none;
+    color:#ffffff;
+}
+a:hover{
+    color:var(--greenish)
+}
+h2{
+    text-align: center;
+    font-size:20px;
+    color:var(--goldish);
+}
+h1{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items:center;
+    height:60px;
+}
+.h1{
+    grid-area: h1;
+    display: flex;
+    background-color: var(--whitish);
+    color:black;
+    font-size: 30px;
+    justify-content: center;
+    width: 100%;
+}
+li{
+    color: black;
+}
+img{
+    height:300px;
+    width:300px;
+}
+p{
+    text-align:justify;
+    color: black;
+    font-size: var(--p_size);
+    font-family:var(--p_family) ;
+    line-height: 1.2em;
+}
+nav{
+    background-color:#000000;
+    font-size: var(--a_size);
+    display: flex;
+    justify-content: space-between;
+    grid-area: nav;
+    padding:10px;
+}
+#Aboutme{
+    background-color:var(--greenish);
+    grid-area: Aboutme;
+    display: flex;
+}
+#profilepicture{
+    width:500px;
+    text-align: center;
+    margin-right: 200px;
+}
+#profilepicture img{
+    border-radius:50%;
+    margin-left:100px;
+    margin-top:40px;
+    width:300px;
+    height:300px;
+}
+#profilepicture p{
+    margin-left: 100px;
+    font-style: italic;
+}
+#intro{
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    line-height: 2rem;
+    margin-right: 50px;
+}
+
+#Papers{
+    grid-area: Papers;
+    background-color: var(--whitish);
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top:10px;
+}
+.Papersphotos{
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+}
+#Papers img{  
+    border-radius: 10px;
+    height:500px; 
+    width:400px;  
+}
+#Gallery{
+    grid-area: gallery;
+    display: block;
+    background-color: var(--greenish);
+    color:black;
+    font-size: 30px;
+    justify-content: center;
+    margin-top:10px;
+    width: 100%;
+}
+#Gallery div{
+    background-color: var(--greenish);
+    margin-top: 10px;
+}
+.Image{ 
+    grid-area: Image;
+    display: flex;
+    overflow-y: auto;
+    overflow-x: auto;
+    height:380px;
+    width: 100%;
+    /*background-color: var(--greenish);*/
+    gap: 30px;
+}
+.Image img{
+    display: flex;
+    height:300px;
+    /*margin-left: 100px;*/
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+#Hobbies{
+    grid-area:Hobbies;
+    display: block;
+    background-color: rgb(255, 255, 255);
+    color:var(--blackish);
+    border:5px solid var(--blackish);
+}
+.Hobby{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+#Achievements{
+    grid-area: Achievements;
+    background-color:var(--whitish);
+    color: var(--blackish);
+    display: grid;
+    border:5px solid  var(--blackish);
+}
+.content{
+    margin: 40px 40px;
+}
+#Books{
+    display: flex;
+    grid-area: Books;
+    background-color: var(--greenish);
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top:0px;
+    margin-bottom:30px;
+}
+#Books div{
+    background-color: var(--greenish);
+    margin-top:10px;
+}
+.card{
+    width: 325px;
+    background-color: #f4f4f4;
+    border-radius:  10px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.3);
+    overflow: hidden;
+    transition: transform 0.6s ease;
+}
+.card img{
+    width:100%;
+    height: auto;
+    object-fit: cover;
+    height:500px;  
+
+}
+.card-content{
+    padding:20px;
+}
+.card-content h2{
+    font-size:22px;
+    color:#666;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+.card-button{
+    display: inline-block;
+    background-color: var(--bluish);
+    color:var(--whitish);
+    text-decoration: none;
+    border-radius: 30px;
+    padding:8px 16px;
+    margin-left: 50px;
+    justify-content: center;
+}
+.card:hover{
+    transform: translateY(-20px);
+}
+#Blogs{
+    grid-area:Blogs;
+    display: block;
+}
+#Blog{
+    display: flex;
+    margin-bottom:20px ;
+}
+.Blog_card {
+    
+    background-color: var(--whitish);
+    border:5px solid black;
+    margin-left:5px;
+    margin-right: 5px;
+    width: 50%;
+}
+.Blog_card img{
+    justify-content: center;
+    align-items: center;
+    margin-left:35%;
+}
+
+@media only screen and (max-width:500px) {
+    body{
+        margin-right:0px;
+    }
+    .container{
+        display:grid;
+        grid-template-areas: 
+        "nav"
+        "Aboutme"
+        "Papers"
+        "gallery"
+        "Hobbies"
+        "Achievements"
+        "Books"
+        "Blogs"
+        ;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        
+    }
+    #Aboutme{
+        display: block;
+    }
+    #profilepicture{
+        width:1000px;
+        margin-right: 0px;
+    }
+    #profilepicture img{
+        align-items: center;
+        justify-content: center;
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+    #profilepicture p{
+        margin-left: 370px;
+        color:var(--whitish);
+    }
+    #intro{
+        margin-left:30px;
+        padding-right:30px;
+    }
+    .Papersphotos{
+        display: block;
+        margin-left:15px;
+    }
+    #intro{
+        margin-right:0px;
+    }
+    #Papers img{  
+        border-radius: 10px;
+        height:500px; 
+        width:480px;     
+    }
+    .Image{
+        width:1000px;
+        display:flex;
+        margin-left:0px;
+    }
+    #Hobbies{
+        display: block!important;
+    }
+    #Achievements{
+        display: block!important;
+    }
+    .Blog_card img{
+        margin-left:20%;
+    }
+   
+}
+
+
+
+
+
+
+
